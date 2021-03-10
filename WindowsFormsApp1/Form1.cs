@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Media;
 
 namespace WindowsFormsApp1
 {
@@ -10,7 +11,7 @@ namespace WindowsFormsApp1
         public string String;
         public char Char;
         public bool Boolean;
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -154,6 +155,13 @@ namespace WindowsFormsApp1
                 BtnBoolean_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
+        }
+
+        private void playMusicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SoundPlayer player = new SoundPlayer();
+            player.SoundLocation = @"Resources\CN.wav";
+            player.Play();
         }
     }
 }
