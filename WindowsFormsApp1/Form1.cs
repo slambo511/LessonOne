@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             listBoolean.SelectedItem = "True";
         }
 
-        private void btnInteger_Click(object sender, EventArgs e)
+        private void BtnInteger_Click(object sender, EventArgs e)
         {
             try
             {
@@ -32,12 +32,12 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnClearAll_Click(object sender, EventArgs e)
+        private void BtnClearAll_Click(object sender, EventArgs e)
         {
             if (lblString.Text != "Empty" && lblInteger.Text != "" && lblFloat.Text != "Empty" && lblChar.Text != "Empty" && lblBoolean.Text != "Empty")
             {
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             lblBoolean.Text = @"Empty";
         }
 
-        private void btnFloat_Click(object sender, EventArgs e)
+        private void BtnFloat_Click(object sender, EventArgs e)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnString_Click(object sender, EventArgs e)
+        private void BtnString_Click(object sender, EventArgs e)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnChar_Click(object sender, EventArgs e)
+        private void BtnChar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnBoolean_Click(object sender, EventArgs e)
+        private void BtnBoolean_Click(object sender, EventArgs e)
         {
             try
             {
@@ -111,47 +111,47 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtInteger_KeyDown(object sender, KeyEventArgs e)
+        private void TxtInteger_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnInteger_Click(this, new EventArgs());
+                BtnInteger_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
         }
 
-        private void txtFloat_KeyDown(object sender, KeyEventArgs e)
+        private void TxtFloat_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnFloat_Click(this, new EventArgs());
+                BtnFloat_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
         }
 
-        private void txtString_KeyDown(object sender, KeyEventArgs e)
+        private void TxtString_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnString_Click(this, new EventArgs());
+                BtnString_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
         }
 
-        private void txtChar_KeyDown(object sender, KeyEventArgs e)
+        private void TxtChar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnChar_Click(this, new EventArgs());
+                BtnChar_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
         }
 
-        private void listBoolean_KeyDown(object sender, KeyEventArgs e)
+        private void ListBoolean_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnBoolean_Click(this, new EventArgs());
+                BtnBoolean_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
         }

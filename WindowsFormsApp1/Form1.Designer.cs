@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             this.btnInteger.TabIndex = 0;
             this.btnInteger.Text = "Add Integer";
             this.btnInteger.UseVisualStyleBackColor = true;
-            this.btnInteger.Click += new System.EventHandler(this.btnInteger_Click);
+            this.btnInteger.Click += new System.EventHandler(this.BtnInteger_Click);
             // 
             // btnFloat
             // 
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
             this.btnFloat.TabIndex = 3;
             this.btnFloat.Text = "Add Float";
             this.btnFloat.UseVisualStyleBackColor = true;
-            this.btnFloat.Click += new System.EventHandler(this.btnFloat_Click);
+            this.btnFloat.Click += new System.EventHandler(this.BtnFloat_Click);
             // 
             // btnString
             // 
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             this.btnString.TabIndex = 6;
             this.btnString.Text = "Add String";
             this.btnString.UseVisualStyleBackColor = true;
-            this.btnString.Click += new System.EventHandler(this.btnString_Click);
+            this.btnString.Click += new System.EventHandler(this.BtnString_Click);
             // 
             // btnChar
             // 
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
             this.btnChar.TabIndex = 9;
             this.btnChar.Text = "Add Char";
             this.btnChar.UseVisualStyleBackColor = true;
-            this.btnChar.Click += new System.EventHandler(this.btnChar_Click);
+            this.btnChar.Click += new System.EventHandler(this.BtnChar_Click);
             // 
             // btnBoolean
             // 
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
             this.btnBoolean.TabIndex = 12;
             this.btnBoolean.Text = "Add Boolean";
             this.btnBoolean.UseVisualStyleBackColor = true;
-            this.btnBoolean.Click += new System.EventHandler(this.btnBoolean_Click);
+            this.btnBoolean.Click += new System.EventHandler(this.BtnBoolean_Click);
             // 
             // txtInteger
             // 
@@ -104,7 +104,7 @@ namespace WindowsFormsApp1
             this.txtInteger.Name = "txtInteger";
             this.txtInteger.Size = new System.Drawing.Size(100, 20);
             this.txtInteger.TabIndex = 1;
-            this.txtInteger.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInteger_KeyDown);
+            this.txtInteger.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtInteger_KeyDown);
             // 
             // txtFloat
             // 
@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
             this.txtFloat.Name = "txtFloat";
             this.txtFloat.Size = new System.Drawing.Size(100, 20);
             this.txtFloat.TabIndex = 4;
-            this.txtFloat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFloat_KeyDown);
+            this.txtFloat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFloat_KeyDown);
             // 
             // txtString
             // 
@@ -120,7 +120,7 @@ namespace WindowsFormsApp1
             this.txtString.Name = "txtString";
             this.txtString.Size = new System.Drawing.Size(100, 20);
             this.txtString.TabIndex = 7;
-            this.txtString.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtString_KeyDown);
+            this.txtString.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtString_KeyDown);
             // 
             // txtChar
             // 
@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             this.txtChar.Name = "txtChar";
             this.txtChar.Size = new System.Drawing.Size(100, 20);
             this.txtChar.TabIndex = 10;
-            this.txtChar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChar_KeyDown);
+            this.txtChar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtChar_KeyDown);
             // 
             // listBoolean
             // 
@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             this.listBoolean.Name = "listBoolean";
             this.listBoolean.Size = new System.Drawing.Size(100, 30);
             this.listBoolean.TabIndex = 13;
-            this.listBoolean.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoolean_KeyDown);
+            this.listBoolean.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListBoolean_KeyDown);
             // 
             // lblInteger
             // 
@@ -195,7 +195,7 @@ namespace WindowsFormsApp1
             this.btnClearAll.TabIndex = 15;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = true;
-            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            this.btnClearAll.Click += new System.EventHandler(this.BtnClearAll_Click);
             // 
             // btnExit
             // 
@@ -205,7 +205,7 @@ namespace WindowsFormsApp1
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // Form1
             // 
