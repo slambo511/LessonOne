@@ -96,7 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CN.mp3.mp3" />
     <Content Include="Resources\CN.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
