@@ -49,6 +49,7 @@ namespace WindowsFormsApp1
             this.btnExit = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stopMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,16 +215,24 @@ namespace WindowsFormsApp1
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.playMusicToolStripMenuItem});
+            this.playMusicToolStripMenuItem,
+            this.stopMusicToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // playMusicToolStripMenuItem
             // 
             this.playMusicToolStripMenuItem.Name = "playMusicToolStripMenuItem";
             this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.playMusicToolStripMenuItem.Text = "Play Musi&c";
+            this.playMusicToolStripMenuItem.Text = "&Play Music";
             this.playMusicToolStripMenuItem.Click += new System.EventHandler(this.playMusicToolStripMenuItem_Click);
+            // 
+            // stopMusicToolStripMenuItem
+            // 
+            this.stopMusicToolStripMenuItem.Name = "stopMusicToolStripMenuItem";
+            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stopMusicToolStripMenuItem.Text = "&Stop Music";
+            this.stopMusicToolStripMenuItem.Click += new System.EventHandler(this.stopMusicToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -277,6 +286,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem playMusicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stopMusicToolStripMenuItem;
     }
 }
 

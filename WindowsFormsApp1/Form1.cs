@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
         public string String;
         public char Char;
         public bool Boolean;
-        
+        SoundPlayer player = new SoundPlayer();
         public Form1()
         {
             InitializeComponent();
@@ -74,6 +74,10 @@ namespace WindowsFormsApp1
                 String = (txtString.Text);
                 lblString.Text = String;
                 txtString.Text = @"";
+                if (lblString.Text == @"Comfortably Numb")
+                {
+                    MessageBox.Show(@"You found the Easter egg :-)");
+                }
             }
             catch (Exception ex)
             {
@@ -159,9 +163,13 @@ namespace WindowsFormsApp1
 
         private void playMusicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer();
             player.SoundLocation = @"Resources\CN.wav";
             player.Play();
+        }
+
+        private void stopMusicToolStripMenuItem_Click(object sender, EventArgs e)
+        {          
+            player.Stop();
         }
     }
 }
