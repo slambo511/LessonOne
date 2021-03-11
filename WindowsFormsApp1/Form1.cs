@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
          * comment */
 
         /// <summary>
-        /// This is and XML comment
+        /// This is an XML comment
         /// </summary>
 
         public Form1()
@@ -40,9 +40,11 @@ namespace WindowsFormsApp1
                     txtInteger.Focus();
                     return;
                 }
+
                 Integer = int.Parse(txtInteger.Text);
                 lblInteger.Text = Integer.ToString();
                 txtInteger.Text = @"";
+
             }
             catch (Exception ex)
             {
@@ -61,7 +63,17 @@ namespace WindowsFormsApp1
                     txtFloat.Focus();
                     return;
                 }
+
                 Float = float.Parse(txtFloat.Text);
+
+                if (!txtFloat.Text.Contains(@"."))
+                {
+                    MessageBox.Show(@"You must enter fractional number");
+                    txtFloat.Text = "";
+                    txtFloat.Focus();
+                    return;
+                }
+
                 lblFloat.Text = Float.ToString();
                 txtFloat.Text = @"";
             }
@@ -82,9 +94,11 @@ namespace WindowsFormsApp1
                     txtString.Focus();
                     return;
                 }
+
                 String = (txtString.Text);
                 lblString.Text = String;
                 txtString.Text = @"";
+
                 if (lblString.Text == @"Comfortably Numb" || lblString.Text == @"Pink Floyd")
                 {
                     MessageBox.Show(@"You found the Easter egg :-)");
@@ -107,9 +121,11 @@ namespace WindowsFormsApp1
                     txtChar.Focus();
                     return;
                 }
+
                 Char = char.Parse(txtChar.Text);
                 lblChar.Text = Char.ToString();
                 txtChar.Text = @"";
+
             }
             catch (Exception ex)
             {
