@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             listBoolean.SelectedItem = "True";
+            txtInteger.Select();
         }
 
         private void BtnInteger_Click(object sender, EventArgs e)
