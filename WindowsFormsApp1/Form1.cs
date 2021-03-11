@@ -165,6 +165,8 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
+                // Stops the program from make "ding" noise when pressing Enter.
+                e.SuppressKeyPress = true;
                 BtnInteger_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
@@ -174,6 +176,8 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
+                // Stops the program from make "ding" noise when pressing Enter.
+                e.SuppressKeyPress = true;
                 BtnFloat_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
@@ -183,6 +187,8 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
+                // Stops the program from make "ding" noise when pressing Enter.
+                e.SuppressKeyPress = true;
                 BtnString_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
@@ -192,6 +198,8 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
+                // Stops the program from make "ding" noise when pressing Enter.
+                e.SuppressKeyPress = true;
                 BtnChar_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
@@ -201,6 +209,8 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
+                // Stops the program from make "ding" noise when pressing Enter.
+                e.SuppressKeyPress = true;
                 BtnBoolean_Click(this, new EventArgs());
                 this.ActiveControl = null;
             }
