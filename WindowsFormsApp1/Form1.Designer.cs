@@ -225,14 +225,14 @@ namespace WindowsFormsApp1
             this.playMusicToolStripMenuItem.Name = "playMusicToolStripMenuItem";
             this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.playMusicToolStripMenuItem.Text = "&Play Music";
-            this.playMusicToolStripMenuItem.Click += new System.EventHandler(this.playMusicToolStripMenuItem_Click);
+            this.playMusicToolStripMenuItem.Click += new System.EventHandler(this.PlayMusicToolStripMenuItem_Click);
             // 
             // stopMusicToolStripMenuItem
             // 
             this.stopMusicToolStripMenuItem.Name = "stopMusicToolStripMenuItem";
             this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopMusicToolStripMenuItem.Text = "&Stop Music";
-            this.stopMusicToolStripMenuItem.Click += new System.EventHandler(this.stopMusicToolStripMenuItem_Click);
+            this.stopMusicToolStripMenuItem.Click += new System.EventHandler(this.StopMusicToolStripMenuItem_Click);
             // 
             // Form1
             // 

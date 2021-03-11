@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
         public string String;
         public char Char;
         public bool Boolean;
-        SoundPlayer player = new SoundPlayer();
+        readonly SoundPlayer player = new SoundPlayer();
 
         public Form1()
         {
@@ -23,6 +23,12 @@ namespace WindowsFormsApp1
         {
             try
             {
+                if (txtInteger.Text == "")
+                {
+                    MessageBox.Show("You must enter a value first");
+                    txtInteger.Focus();
+                    return;
+                }
                 Integer = int.Parse(txtInteger.Text);
                 lblInteger.Text = Integer.ToString();
                 txtInteger.Text = @"";
@@ -34,29 +40,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void BtnClearAll_Click(object sender, EventArgs e)
-        {
-            if (lblString.Text != "Empty" && lblInteger.Text != "" && lblFloat.Text != "Empty" && lblChar.Text != "Empty" && lblBoolean.Text != "Empty")
-            {
-                MessageBox.Show(@"Well done, you filled them all :-)");
-            }
-
-            lblInteger.Text = @"Empty";
-            lblFloat.Text = @"Empty";
-            lblString.Text = @"Empty";
-            lblChar.Text = @"Empty";
-            lblBoolean.Text = @"Empty";
-        }
-
         private void BtnFloat_Click(object sender, EventArgs e)
         {
             try
             {
+                if (txtFloat.Text == "")
+                {
+                    MessageBox.Show("You must enter a value first");
+                    txtFloat.Focus();
+                    return;
+                }
                 Float = float.Parse(txtFloat.Text);
                 lblFloat.Text = Float.ToString();
                 txtFloat.Text = @"";
@@ -97,6 +90,12 @@ namespace WindowsFormsApp1
         {
             try
             {
+                if (txtChar.Text == "")
+                {
+                    MessageBox.Show("You must enter a value first");
+                    txtChar.Focus();
+                    return;
+                }
                 Char = char.Parse(txtChar.Text);
                 lblChar.Text = Char.ToString();
                 txtChar.Text = @"";
@@ -121,6 +120,20 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.Message);
                 // txtBoolean.Text = @"";
             }
+        }
+
+        private void BtnClearAll_Click(object sender, EventArgs e)
+        {
+            if (lblString.Text != "Empty" && lblInteger.Text != "" && lblFloat.Text != "Empty" && lblChar.Text != "Empty" && lblBoolean.Text != "Empty")
+            {
+                MessageBox.Show(@"Well done, you filled them all :-)");
+            }
+
+            lblInteger.Text = @"Empty";
+            lblFloat.Text = @"Empty";
+            lblString.Text = @"Empty";
+            lblChar.Text = @"Empty";
+            lblBoolean.Text = @"Empty";
         }
 
         private void TxtInteger_KeyDown(object sender, KeyEventArgs e)
@@ -168,15 +181,20 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void playMusicToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PlayMusicToolStripMenuItem_Click(object sender, EventArgs e)
         {
             player.SoundLocation = @"Resources\CN.wav";
             player.Play();
         }
 
-        private void stopMusicToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StopMusicToolStripMenuItem_Click(object sender, EventArgs e)
         {          
             player.Stop();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
