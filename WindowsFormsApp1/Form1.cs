@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Media;
 
-namespace WindowsFormsApp1
+namespace DataTypes
 {
     public partial class Form1 : Form
     {
