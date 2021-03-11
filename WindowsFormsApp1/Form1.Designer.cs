@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnInteger = new System.Windows.Forms.Button();
             this.btnFloat = new System.Windows.Forms.Button();
             this.btnString = new System.Windows.Forms.Button();
@@ -218,19 +219,19 @@ namespace WindowsFormsApp1
             this.playMusicToolStripMenuItem,
             this.stopMusicToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
             // 
             // playMusicToolStripMenuItem
             // 
             this.playMusicToolStripMenuItem.Name = "playMusicToolStripMenuItem";
-            this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.playMusicToolStripMenuItem.Text = "&Play Music";
             this.playMusicToolStripMenuItem.Click += new System.EventHandler(this.PlayMusicToolStripMenuItem_Click);
             // 
             // stopMusicToolStripMenuItem
             // 
             this.stopMusicToolStripMenuItem.Name = "stopMusicToolStripMenuItem";
-            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.stopMusicToolStripMenuItem.Text = "&Stop Music";
             this.stopMusicToolStripMenuItem.Click += new System.EventHandler(this.StopMusicToolStripMenuItem_Click);
             // 
@@ -257,6 +258,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnString);
             this.Controls.Add(this.btnFloat);
             this.Controls.Add(this.btnInteger);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Basic Data Types";
             this.contextMenuStrip1.ResumeLayout(false);
