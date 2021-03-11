@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
         public char Char;
         public bool Boolean;
         SoundPlayer player = new SoundPlayer();
+
         public Form1()
         {
             InitializeComponent();
@@ -71,6 +72,12 @@ namespace WindowsFormsApp1
         {
             try
             {
+                if (txtString.Text == "")
+                {
+                    MessageBox.Show("You cannot use a null String");
+                    txtString.Focus();
+                    return;
+                }
                 String = (txtString.Text);
                 lblString.Text = String;
                 txtString.Text = @"";
