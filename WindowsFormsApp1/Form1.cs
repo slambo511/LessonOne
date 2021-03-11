@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            listBoolean.SelectedItem = "True";
+            listBoolean.SelectedItem = @"True";
             txtInteger.Select();
         }
 
@@ -34,9 +34,9 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if (txtInteger.Text == "")
+                if (txtInteger.Text == @"")
                 {
-                    MessageBox.Show("You must enter a value first");
+                    MessageBox.Show(@"You must enter a value first");
                     txtInteger.Focus();
                     return;
                 }
@@ -55,9 +55,9 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if (txtFloat.Text == "")
+                if (txtFloat.Text == @"")
                 {
-                    MessageBox.Show("You must enter a value first");
+                    MessageBox.Show(@"You must enter a value first");
                     txtFloat.Focus();
                     return;
                 }
@@ -76,16 +76,16 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if (txtString.Text == "")
+                if (txtString.Text == @"")
                 {
-                    MessageBox.Show("You cannot use a null String");
+                    MessageBox.Show(@"You cannot use a null String");
                     txtString.Focus();
                     return;
                 }
                 String = (txtString.Text);
                 lblString.Text = String;
                 txtString.Text = @"";
-                if (lblString.Text == @"Comfortably Numb")
+                if (lblString.Text == @"Comfortably Numb" || lblString.Text == @"Pink Floyd")
                 {
                     MessageBox.Show(@"You found the Easter egg :-)");
                 }
@@ -101,9 +101,9 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if (txtChar.Text == "")
+                if (txtChar.Text == @"")
                 {
-                    MessageBox.Show("You must enter a value first");
+                    MessageBox.Show(@"You must enter a value first");
                     txtChar.Focus();
                     return;
                 }
@@ -124,18 +124,16 @@ namespace WindowsFormsApp1
             {
                 Boolean = bool.Parse(listBoolean.SelectedItem.ToString());
                 lblBoolean.Text = listBoolean.SelectedItem.ToString();
-                // txtBoolean.Text = @"";
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                // txtBoolean.Text = @"";
             }
         }
 
         private void BtnClearAll_Click(object sender, EventArgs e)
         {
-            if (lblString.Text != "Empty" && lblInteger.Text != "" && lblFloat.Text != "Empty" && lblChar.Text != "Empty" && lblBoolean.Text != "Empty")
+            if (lblString.Text != @"Empty" && lblInteger.Text != @"Empty" && lblFloat.Text != @"Empty" && lblChar.Text != @"Empty" && lblBoolean.Text != @"Empty")
             {
                 MessageBox.Show(@"Well done, you filled them all :-)");
             }
