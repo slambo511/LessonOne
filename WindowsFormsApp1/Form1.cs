@@ -13,6 +13,16 @@ namespace WindowsFormsApp1
         public bool Boolean;
         readonly SoundPlayer player = new SoundPlayer();
 
+        // This is a single line comment
+
+        /* This is a
+         * multiline
+         * comment */
+
+        /// <summary>
+        /// This is and XML comment
+        /// </summary>
+
         public Form1()
         {
             InitializeComponent();
