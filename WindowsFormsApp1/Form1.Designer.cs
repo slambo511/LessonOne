@@ -51,6 +51,8 @@ namespace DataTypes
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClue = new System.Windows.Forms.Button();
+            this.showClueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -218,23 +220,41 @@ namespace DataTypes
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playMusicToolStripMenuItem,
-            this.stopMusicToolStripMenuItem});
+            this.stopMusicToolStripMenuItem,
+            this.showClueToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
             // 
             // playMusicToolStripMenuItem
             // 
             this.playMusicToolStripMenuItem.Name = "playMusicToolStripMenuItem";
-            this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.playMusicToolStripMenuItem.Text = "&Play Music";
             this.playMusicToolStripMenuItem.Click += new System.EventHandler(this.PlayMusicToolStripMenuItem_Click);
             // 
             // stopMusicToolStripMenuItem
             // 
             this.stopMusicToolStripMenuItem.Name = "stopMusicToolStripMenuItem";
-            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopMusicToolStripMenuItem.Text = "&Stop Music";
             this.stopMusicToolStripMenuItem.Click += new System.EventHandler(this.StopMusicToolStripMenuItem_Click);
+            // 
+            // btnClue
+            // 
+            this.btnClue.Location = new System.Drawing.Point(368, 304);
+            this.btnClue.Name = "btnClue";
+            this.btnClue.Size = new System.Drawing.Size(103, 23);
+            this.btnClue.TabIndex = 17;
+            this.btnClue.Text = "Clue";
+            this.btnClue.UseVisualStyleBackColor = true;
+            this.btnClue.Click += new System.EventHandler(this.btnClue_Click);
+            // 
+            // showClueToolStripMenuItem
+            // 
+            this.showClueToolStripMenuItem.Name = "showClueToolStripMenuItem";
+            this.showClueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showClueToolStripMenuItem.Text = "Show &Clue";
+            this.showClueToolStripMenuItem.Click += new System.EventHandler(this.showClueToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -244,6 +264,7 @@ namespace DataTypes
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(863, 350);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.btnClue);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.lblBoolean);
@@ -293,6 +314,8 @@ namespace DataTypes
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem playMusicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stopMusicToolStripMenuItem;
+        private System.Windows.Forms.Button btnClue;
+        private System.Windows.Forms.ToolStripMenuItem showClueToolStripMenuItem;
     }
 }
 

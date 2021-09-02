@@ -12,10 +12,17 @@ namespace DataTypes
         public char Char;
         public bool Boolean;
         readonly SoundPlayer player = new SoundPlayer();
-        private string clue = "Welcome to the Data Types program. " +
-                "Your clue is \"The opposite of the adverb which tells someone " +
+        private int clueNo = 1;
+        private string clueOne = "Use the other mouse button :-)";
+        private string clueTwo = "Your clue is \"The opposite of the adverb which tells someone " +
                 "you are sitting in a bad chair and the adjective which describes " +
                 "what the dentist does before drilling a tooth.";
+        private string clueThree = "A song by a band whose name is the colour of Barbie's dress " +
+                "and the surname of the man killed in America by police which caused an outcry " +
+                "across the world.";
+        private string clueFour = "Your final clue is that, if you have the answer and it is not " +
+                "working, remember how song titles are written and remember, computers are " +
+                "stupid and need everything to be exact, or they will fail.";
 
         // This is a single line comment
 
@@ -238,12 +245,63 @@ namespace DataTypes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ShowClue();
+            ShowClue("Welcome to the Data Types program. ");
         }
 
         private void ShowClue()
         {
-            MessageBox.Show(clue, "Clue");
+            if (clueNo == 1)
+            {
+                MessageBox.Show(clueOne, "First Clue");
+                clueNo += 1;
+            }
+            else if (clueNo == 2)
+            {
+                MessageBox.Show(clueTwo, "Second Clue");
+                clueNo += 1;
+            }
+            else if (clueNo == 3)
+            {
+                MessageBox.Show(clueThree, "Third Clue");
+                clueNo += 1;
+            }
+            else
+            {
+                MessageBox.Show(clueFour, "No More Clues");
+            }
+        }
+
+        private void ShowClue(string additionalMessage)
+        {
+            if (clueNo == 1)
+            {
+                MessageBox.Show(additionalMessage + clueOne, "First Clue");
+                clueNo += 1;
+            }
+            else if (clueNo == 2)
+            {
+                MessageBox.Show(clueTwo, "Second Clue");
+                clueNo += 1;
+            }
+            else if (clueNo == 3)
+            {
+                MessageBox.Show(clueThree, "Third Clue");
+                clueNo += 1;
+            }
+            else
+            {
+                MessageBox.Show(clueFour, "No More Clues");
+            }
+        }
+
+        private void btnClue_Click(object sender, EventArgs e)
+        {
+            ShowClue();
+        }
+
+        private void showClueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowClue();
         }
     }
 }
