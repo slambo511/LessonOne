@@ -296,12 +296,31 @@ namespace DataTypes
 
         private void btnClue_Click(object sender, EventArgs e)
         {
-            ShowClue();
+            if (clueNo < 4)
+            {
+                ShowClue();
+            }
+            else
+            {
+                ShowClue("There are only four clues at the moment. ");
+            }
         }
 
         private void showClueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowClue();
+            if (clueNo < 4)
+            {
+                ShowClue();
+            }
+            else
+            {
+                ShowClue("There are only four clues at the moment. ");
+            }
+        }
+
+        private void revealSomethingHiddenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnClue.Visible = true;
         }
     }
 }

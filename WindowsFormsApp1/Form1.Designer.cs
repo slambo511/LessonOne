@@ -51,8 +51,9 @@ namespace DataTypes
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnClue = new System.Windows.Forms.Button();
             this.showClueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClue = new System.Windows.Forms.Button();
+            this.revealSomethingHiddenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -221,23 +222,31 @@ namespace DataTypes
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playMusicToolStripMenuItem,
             this.stopMusicToolStripMenuItem,
-            this.showClueToolStripMenuItem});
+            this.showClueToolStripMenuItem,
+            this.revealSomethingHiddenToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(212, 114);
             // 
             // playMusicToolStripMenuItem
             // 
             this.playMusicToolStripMenuItem.Name = "playMusicToolStripMenuItem";
-            this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.playMusicToolStripMenuItem.Text = "&Play Music";
             this.playMusicToolStripMenuItem.Click += new System.EventHandler(this.PlayMusicToolStripMenuItem_Click);
             // 
             // stopMusicToolStripMenuItem
             // 
             this.stopMusicToolStripMenuItem.Name = "stopMusicToolStripMenuItem";
-            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.stopMusicToolStripMenuItem.Text = "&Stop Music";
             this.stopMusicToolStripMenuItem.Click += new System.EventHandler(this.StopMusicToolStripMenuItem_Click);
+            // 
+            // showClueToolStripMenuItem
+            // 
+            this.showClueToolStripMenuItem.Name = "showClueToolStripMenuItem";
+            this.showClueToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.showClueToolStripMenuItem.Text = "Show &Clue";
+            this.showClueToolStripMenuItem.Click += new System.EventHandler(this.showClueToolStripMenuItem_Click);
             // 
             // btnClue
             // 
@@ -247,14 +256,15 @@ namespace DataTypes
             this.btnClue.TabIndex = 17;
             this.btnClue.Text = "Clue";
             this.btnClue.UseVisualStyleBackColor = true;
+            this.btnClue.Visible = false;
             this.btnClue.Click += new System.EventHandler(this.btnClue_Click);
             // 
-            // showClueToolStripMenuItem
+            // revealSomethingHiddenToolStripMenuItem
             // 
-            this.showClueToolStripMenuItem.Name = "showClueToolStripMenuItem";
-            this.showClueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.showClueToolStripMenuItem.Text = "Show &Clue";
-            this.showClueToolStripMenuItem.Click += new System.EventHandler(this.showClueToolStripMenuItem_Click);
+            this.revealSomethingHiddenToolStripMenuItem.Name = "revealSomethingHiddenToolStripMenuItem";
+            this.revealSomethingHiddenToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.revealSomethingHiddenToolStripMenuItem.Text = "&Reveal Something &Hidden";
+            this.revealSomethingHiddenToolStripMenuItem.Click += new System.EventHandler(this.revealSomethingHiddenToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -316,6 +326,7 @@ namespace DataTypes
         private System.Windows.Forms.ToolStripMenuItem stopMusicToolStripMenuItem;
         private System.Windows.Forms.Button btnClue;
         private System.Windows.Forms.ToolStripMenuItem showClueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem revealSomethingHiddenToolStripMenuItem;
     }
 }
 
