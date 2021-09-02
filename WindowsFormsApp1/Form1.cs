@@ -238,6 +238,11 @@ namespace DataTypes
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ShowClue();
+        }
+
+        private void ShowClue()
+        {
             MessageBox.Show(clue, "Clue");
         }
     }
