@@ -12,6 +12,10 @@ namespace DataTypes
         public char Char;
         public bool Boolean;
         readonly SoundPlayer player = new SoundPlayer();
+        private string clue = "Welcome to the Data Types program. " +
+                "Your clue is \"The opposite of the adverb which tells someone " +
+                "you are sitting in a bad chair and the adjective which describes " +
+                "what the dentist does before drilling a tooth.";
 
         // This is a single line comment
 
@@ -234,10 +238,7 @@ namespace DataTypes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome to the Data Types program. " +
-                "Your clue is \"The opposite of the adverb which tells someone " +
-                "you are sitting in a bad chair and the adjective which describes " +
-                "what the dentist does before drilling a tooth.", "Clue");
+            MessageBox.Show(clue, "Clue");
         }
     }
 }
