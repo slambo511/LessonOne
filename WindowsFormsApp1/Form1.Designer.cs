@@ -206,7 +206,7 @@ namespace DataTypes
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(505, 304);
+            this.btnExit.Location = new System.Drawing.Point(237, 304);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(103, 23);
             this.btnExit.TabIndex = 16;
@@ -241,7 +241,7 @@ namespace DataTypes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(639, 350);
+            this.ClientSize = new System.Drawing.Size(365, 350);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClearAll);
