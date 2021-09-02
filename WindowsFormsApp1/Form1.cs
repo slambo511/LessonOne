@@ -12,6 +12,7 @@ namespace DataTypes
         public char Char;
         public bool Boolean;
         readonly SoundPlayer player = new SoundPlayer();
+        private int noOfClues = 4;
         private int clueNo = 1;
         private string clueOne = "Use the other mouse button :-)";
         private string clueTwo = "Your clue is \"The opposite of the adverb which tells someone " +
@@ -245,7 +246,7 @@ namespace DataTypes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ShowClue("Welcome to the Data Types program. ");
+            MessageBox.Show("Welcome to the Data Types program.");
         }
 
         private void ShowClue()
@@ -265,62 +266,38 @@ namespace DataTypes
                 MessageBox.Show(clueThree, "Third Clue");
                 clueNo += 1;
             }
+            else if (clueNo == 4)
+            {
+                MessageBox.Show(clueFour, "Fourth Clue");
+                revealSomethingHiddenToolStripMenuItem.Visible = true;
+                clueNo = noOfClues + 1;
+            }
             else
             {
-                MessageBox.Show(clueFour, "No More Clues");
+                ShowClue("There are only " + noOfClues.ToString() + " clues at the moment. ");
             }
         }
 
         private void ShowClue(string additionalMessage)
         {
-            if (clueNo == 1)
-            {
-                MessageBox.Show(additionalMessage + clueOne, "First Clue");
-                clueNo += 1;
-            }
-            else if (clueNo == 2)
-            {
-                MessageBox.Show(clueTwo, "Second Clue");
-                clueNo += 1;
-            }
-            else if (clueNo == 3)
-            {
-                MessageBox.Show(clueThree, "Third Clue");
-                clueNo += 1;
-            }
-            else
-            {
-                MessageBox.Show(clueFour, "No More Clues");
-            }
+             MessageBox.Show(additionalMessage + clueFour, "Final Clue");
         }
 
         private void btnClue_Click(object sender, EventArgs e)
         {
-            if (clueNo < 4)
-            {
-                ShowClue();
-            }
-            else
-            {
-                ShowClue("There are only four clues at the moment. ");
-            }
+            clueNo = 1;
+            btnClue.Visible = false;
         }
 
         private void showClueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (clueNo < 4)
-            {
-                ShowClue();
-            }
-            else
-            {
-                ShowClue("There are only four clues at the moment. ");
-            }
+            ShowClue();
         }
 
         private void revealSomethingHiddenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnClue.Visible = true;
+            revealSomethingHiddenToolStripMenuItem.Visible = false;
         }
     }
 }

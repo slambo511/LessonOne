@@ -225,7 +225,7 @@ namespace DataTypes
             this.showClueToolStripMenuItem,
             this.revealSomethingHiddenToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(212, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(212, 92);
             // 
             // playMusicToolStripMenuItem
             // 
@@ -254,7 +254,7 @@ namespace DataTypes
             this.btnClue.Name = "btnClue";
             this.btnClue.Size = new System.Drawing.Size(103, 23);
             this.btnClue.TabIndex = 17;
-            this.btnClue.Text = "Clue";
+            this.btnClue.Text = "Reset Clues";
             this.btnClue.UseVisualStyleBackColor = true;
             this.btnClue.Visible = false;
             this.btnClue.Click += new System.EventHandler(this.btnClue_Click);
@@ -264,6 +264,7 @@ namespace DataTypes
             this.revealSomethingHiddenToolStripMenuItem.Name = "revealSomethingHiddenToolStripMenuItem";
             this.revealSomethingHiddenToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.revealSomethingHiddenToolStripMenuItem.Text = "&Reveal Something &Hidden";
+            this.revealSomethingHiddenToolStripMenuItem.Visible = false;
             this.revealSomethingHiddenToolStripMenuItem.Click += new System.EventHandler(this.revealSomethingHiddenToolStripMenuItem_Click);
             // 
             // Form1
