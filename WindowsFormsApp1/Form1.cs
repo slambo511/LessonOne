@@ -74,12 +74,12 @@ namespace DataTypes
                     return;
                 }
 
-                lblFloat.Text = Float.ToString();
+                lblFloat.Text = Float.ToString() + "f";
                 txtFloat.Text = @"";
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "f");
                 txtFloat.Text = @"";
             }
         }
@@ -95,18 +95,18 @@ namespace DataTypes
                     return;
                 }
 
-                String = (txtString.Text);
+                String = ("\"" + txtString.Text + "\"");
                 lblString.Text = String;
-                txtString.Text = @"";
+                txtString.Text = "";
 
-                if (lblString.Text == @"Comfortably Numb" || lblString.Text == @"Pink Floyd")
+                if (lblString.Text == "\"Comfortably Numb\"" || lblString.Text == @"Pink Floyd")
                 {
                     MessageBox.Show(@"You found the Easter egg :-)");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("\"" + ex.Message + "\"");
                 txtString.Text = @"";
             }
         }
@@ -123,7 +123,7 @@ namespace DataTypes
                 }
 
                 Char = char.Parse(txtChar.Text);
-                lblChar.Text = Char.ToString();
+                lblChar.Text = "\'" + Char.ToString() + "\'";
                 txtChar.Text = @"";
 
             }
@@ -230,6 +230,11 @@ namespace DataTypes
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
