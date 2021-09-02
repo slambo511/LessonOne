@@ -52,8 +52,9 @@ namespace DataTypes
             this.playMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showClueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnClue = new System.Windows.Forms.Button();
             this.revealSomethingHiddenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClue = new System.Windows.Forms.Button();
+            this.txbFirstClue = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -248,6 +249,14 @@ namespace DataTypes
             this.showClueToolStripMenuItem.Text = "Show &Clue";
             this.showClueToolStripMenuItem.Click += new System.EventHandler(this.showClueToolStripMenuItem_Click);
             // 
+            // revealSomethingHiddenToolStripMenuItem
+            // 
+            this.revealSomethingHiddenToolStripMenuItem.Name = "revealSomethingHiddenToolStripMenuItem";
+            this.revealSomethingHiddenToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.revealSomethingHiddenToolStripMenuItem.Text = "&Reveal Something &Hidden";
+            this.revealSomethingHiddenToolStripMenuItem.Visible = false;
+            this.revealSomethingHiddenToolStripMenuItem.Click += new System.EventHandler(this.revealSomethingHiddenToolStripMenuItem_Click);
+            // 
             // btnClue
             // 
             this.btnClue.Location = new System.Drawing.Point(368, 304);
@@ -259,22 +268,24 @@ namespace DataTypes
             this.btnClue.Visible = false;
             this.btnClue.Click += new System.EventHandler(this.btnClue_Click);
             // 
-            // revealSomethingHiddenToolStripMenuItem
+            // txbFirstClue
             // 
-            this.revealSomethingHiddenToolStripMenuItem.Name = "revealSomethingHiddenToolStripMenuItem";
-            this.revealSomethingHiddenToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.revealSomethingHiddenToolStripMenuItem.Text = "&Reveal Something &Hidden";
-            this.revealSomethingHiddenToolStripMenuItem.Visible = false;
-            this.revealSomethingHiddenToolStripMenuItem.Click += new System.EventHandler(this.revealSomethingHiddenToolStripMenuItem_Click);
+            this.txbFirstClue.Location = new System.Drawing.Point(736, 26);
+            this.txbFirstClue.Multiline = true;
+            this.txbFirstClue.Name = "txbFirstClue";
+            this.txbFirstClue.Size = new System.Drawing.Size(100, 220);
+            this.txbFirstClue.TabIndex = 18;
+            this.txbFirstClue.Text = "I might do something?";
+            this.txbFirstClue.MouseHover += new System.EventHandler(this.txbFirstClue_MouseHover);
             // 
             // Form1
             // 
-            this.AcceptButton = this.btnClearAll;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(863, 350);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.txbFirstClue);
             this.Controls.Add(this.btnClue);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClearAll);
@@ -328,6 +339,7 @@ namespace DataTypes
         private System.Windows.Forms.Button btnClue;
         private System.Windows.Forms.ToolStripMenuItem showClueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem revealSomethingHiddenToolStripMenuItem;
+        private System.Windows.Forms.TextBox txbFirstClue;
     }
 }
 

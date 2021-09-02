@@ -6,6 +6,7 @@ namespace DataTypes
 {
     public partial class Form1 : Form
     {
+        public Timer aTimer = new Timer();
         public int Integer;
         public float Float;
         public string String;
@@ -50,6 +51,15 @@ namespace DataTypes
                 {
                     MessageBox.Show(@"You must enter a value first");
                     txtInteger.Focus();
+                    return;
+                }
+                else if (txtInteger.Text == @"42")
+                {
+                    Width = Screen.PrimaryScreen.WorkingArea.Width;
+                    Height = Screen.PrimaryScreen.WorkingArea.Height;
+                    CenterToParent();
+                    txtInteger.Text = @"";
+                    lblInteger.Text = @"Life, the universe and everything";
                     return;
                 }
 
@@ -298,6 +308,41 @@ namespace DataTypes
         {
             btnClue.Visible = true;
             revealSomethingHiddenToolStripMenuItem.Visible = false;
+        }
+
+        private void txbFirstClue_MouseHover(object sender, EventArgs e)
+        {
+            txbFirstClue.Text = "";
+            aTimer.Interval = 5000;
+            aTimer.Enabled = true;
+            aTimer.Start();
+            aTimer.Tick += ATimer_Tick;
+            //aTimer.Dispose();
+        }
+
+        private void ATimer_Tick(object sender, EventArgs e)
+        {
+            txbFirstClue.Text = "First clue: Use the other mouse button :-)";
+            aTimer.Stop();
+            aTimer.Start();
+            aTimer.Tick += BTimer_Tick;
+        }
+
+        private void BTimer_Tick(object sender, EventArgs e)
+        {
+            txbFirstClue.Text = "Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** " +
+                "Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** " +
+                "Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** " +
+                "Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** Error *** ";
+            txbFirstClue.Enabled = false;
+            aTimer.Stop();
+            aTimer.Start();
+            aTimer.Tick += CTimer_Tick;
+        }
+
+        private void CTimer_Tick(object sender, EventArgs e)
+        {
+            txbFirstClue.Visible = false;
         }
     }
 }
