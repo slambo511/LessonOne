@@ -61,12 +61,7 @@ namespace DataTypes
         private void BtnInteger_Click(object sender, EventArgs e)
         {
             try
-            {
-                if (!BG)
-                {
-                    BackgroundImage = BGImage;
-                }
-
+            { 
                 if (txtInteger.Text == @"")
                 {
                     MessageBox.Show(@"You must enter a value first");
@@ -75,7 +70,10 @@ namespace DataTypes
                 }
                 else if (txtInteger.Text == @"42")
                 {
-
+                    if (!BG)
+                    {
+                        BackgroundImage = BGImage;
+                    }
                     fourtyTwoCount += 1;
                     if (fourtyTwoCount == 42)
                     {
