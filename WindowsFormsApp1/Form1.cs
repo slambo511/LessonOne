@@ -1,11 +1,21 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Media;
+using System.Drawing;
+using System.Drawing.Text;
 
 namespace DataTypes
 {
     public partial class Form1 : Form
     {
+        public int maxWidth, maxHeight;
+        public int[] fontSizes = new int[] { 14, 16, 18, 20, 22, 24, 26 };
+        public static FontFamily fontFamily = new FontFamily("Arial");
+        public Font font = new Font(fontFamily, 12, FontStyle.Regular, GraphicsUnit.Point);
+        public string familyName, familyList = "";
+        public FontFamily[] fontFamilies;
+        public InstalledFontCollection installedFontCollection = new InstalledFontCollection();
+        public Random random = new Random();
         public Timer aTimer = new Timer();
         public int Integer;
         public float Float;
@@ -15,6 +25,7 @@ namespace DataTypes
         readonly SoundPlayer player = new SoundPlayer();
         private int noOfClues = 4;
         private int clueNo = 1;
+        public int familyCount;
         private string clueOne = "Use the other mouse button :-)";
         private string clueTwo = "Your clue is \"The opposite of the adverb which tells someone " +
                 "you are sitting in a bad chair and the adjective which describes " +
@@ -55,18 +66,111 @@ namespace DataTypes
                 }
                 else if (txtInteger.Text == @"42")
                 {
+                    int spaceToOutput = 0;
+                    int biggestCurrentMax = 0;
+                    int biggestWidth = 0, biggestHeight = 0;
                     Width = Screen.PrimaryScreen.WorkingArea.Width;
                     Height = Screen.PrimaryScreen.WorkingArea.Height;
                     CenterToParent();
                     txtInteger.Text = @"";
                     lblInteger.Text = @"Life, the universe and everything";
-                    return;
-                }
+                    foreach (Control c in Controls)
+                    {
+                        int randomFont = random.Next(1, familyCount);
+                        int randomSize = random.Next(1, fontSizes.Length);
+                        c.Font = new Font(fontFamilies[randomFont], fontSizes[randomSize]);
 
+                        if (c == btnBoolean || c == btnChar || c == btnFloat || c == btnString || c == btnInteger)
+                        {
+                            Size size = TextRenderer.MeasureText(c.Text.Replace(' ', '_'), c.Font);
+                            if (size.Width > c.Width) { c.Width = size.Width + 6; }
+                            if (size.Height > c.Height) { c.Height = size.Height + 6; }
+
+                            if (c.Width > biggestWidth) { biggestWidth = c.Width; }
+                            if (c.Height > biggestHeight) { biggestHeight = c.Height; }
+
+                            int currentMax = c.Location.X + c.Width + 15;
+                            if (currentMax > biggestCurrentMax) { biggestCurrentMax = currentMax; }
+                        }
+                    }
+                    // cycle through buttons and resize
+                    foreach (Control c in Controls)
+                    {
+                        if (c == btnBoolean || c == btnChar || c == btnFloat || c == btnString || c == btnInteger)
+                        {
+                            c.Width = biggestWidth;
+                            c.Height = biggestHeight;
+                        }
+                        if (c == listBoolean)
+                        {
+                            c.Height = biggestHeight * 2;
+                        }
+                    }
+
+                    spaceToOutput = biggestWidth + biggestCurrentMax + 10;
+
+                    foreach (Control c in Controls)
+                    {
+                        if (c == lblBoolean || c == lblChar || c == lblFloat || c == lblInteger || c == lblString)
+                        {
+                            c.Location = new Point(spaceToOutput, c.Location.Y);
+                        }
+                    }
+
+                    foreach (Control c in Controls)
+                    {
+                        if (c == txtChar || c == txtFloat || c == txtInteger || c == txtString || c == listBoolean)
+                        {
+                            if (c.Location.X < biggestCurrentMax)
+                            {
+                                c.Location = new Point(biggestCurrentMax + 5, c.Location.Y);
+                                c.Width = biggestWidth;
+                            }
+                        }
+                    }
+
+                    //    if ((c == txbFirstClue) || (c == txtChar) || (c == txtFloat) || (c ==txtInteger) || (c == txtString) || (c == listBoolean))
+                    //    {
+                    //        continue;
+                    //    }
+                    //    if (c == btnInteger || c == btnChar || c == btnBoolean || c == btnFloat || c == btnString)
+                    //    {
+                    //        Size size = TextRenderer.MeasureText(c.Text.Replace(' ', '_'), c.Font);
+                    //        if (c.Width > maxWidth)
+                    //        {
+                    //            maxWidth = c.Width;
+                    //        }
+                    //        if (c.Height > maxHeight)
+                    //        {
+                    //            maxHeight = c.Height;
+                    //        }
+                    //        c.Width = size.Width + 25;
+                    //        c.Height = size.Height + 15;
+                    //        if ((btnInteger.Location.X + btnInteger.Width) > txtInteger.Location.X)
+                    //        { 
+                    //            txtInteger.Location = new Point(txtInteger.Location.X + btnInteger.Location.X + btnInteger.Width + 15, txtInteger.Location.Y);
+                    //        }
+                    //    }
+                    //    listBoolean.Height = (maxHeight + 10) * 2;
+                    //    if (txtChar.Location.X < maxWidth + 10 || 
+                    //        txtFloat.Location.X < maxWidth +10 || 
+                    //        txtInteger.Location.X < maxWidth + 10 || 
+                    //        txtString.Location.X < maxWidth + 10 || 
+                    //        listBoolean.Location.X < maxWidth + 10)
+                    //    {
+                    //        txtChar.Location = new Point(maxWidth + 10, txtChar.Location.Y);
+                    //        txtFloat.Location = new Point(maxWidth + 10, txtFloat.Location.Y);
+                    //        txtInteger.Location = new Point(maxWidth + 10, txtInteger.Location.Y);
+                    //        txtString.Location = new Point(maxWidth + 10, txtString.Location.Y);
+                    //        listBoolean.Location = new Point(maxWidth + 10, listBoolean.Location.Y);
+                    //        maxWidth = 0;
+                    //    }
+                    //
+                }
+ 
                 Integer = int.Parse(txtInteger.Text);
                 lblInteger.Text = Integer.ToString();
                 txtInteger.Text = @"";
-
             }
             catch (Exception ex)
             {
@@ -257,6 +361,8 @@ namespace DataTypes
         private void Form1_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to the Data Types program.");
+            fontFamilies = installedFontCollection.Families;
+            familyCount = fontFamilies.Length;
         }
 
         private void ShowClue()
@@ -312,6 +418,7 @@ namespace DataTypes
 
         private void txbFirstClue_MouseHover(object sender, EventArgs e)
         {
+            clueNo = 2;
             txbFirstClue.Text = "";
             aTimer.Interval = 5000;
             aTimer.Enabled = true;
@@ -323,6 +430,7 @@ namespace DataTypes
         private void ATimer_Tick(object sender, EventArgs e)
         {
             txbFirstClue.Text = "First clue: Use the other mouse button :-)";
+            showClueToolStripMenuItem.Enabled = true;
             aTimer.Stop();
             aTimer.Start();
             aTimer.Tick += BTimer_Tick;

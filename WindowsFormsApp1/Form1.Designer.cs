@@ -60,7 +60,7 @@ namespace DataTypes
             // 
             // btnInteger
             // 
-            this.btnInteger.Location = new System.Drawing.Point(23, 24);
+            this.btnInteger.Location = new System.Drawing.Point(12, 12);
             this.btnInteger.Name = "btnInteger";
             this.btnInteger.Size = new System.Drawing.Size(103, 23);
             this.btnInteger.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace DataTypes
             // 
             // btnFloat
             // 
-            this.btnFloat.Location = new System.Drawing.Point(23, 68);
+            this.btnFloat.Location = new System.Drawing.Point(12, 87);
             this.btnFloat.Name = "btnFloat";
             this.btnFloat.Size = new System.Drawing.Size(103, 23);
             this.btnFloat.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace DataTypes
             // 
             // btnString
             // 
-            this.btnString.Location = new System.Drawing.Point(23, 115);
+            this.btnString.Location = new System.Drawing.Point(12, 162);
             this.btnString.Name = "btnString";
             this.btnString.Size = new System.Drawing.Size(103, 23);
             this.btnString.TabIndex = 6;
@@ -90,7 +90,7 @@ namespace DataTypes
             // 
             // btnChar
             // 
-            this.btnChar.Location = new System.Drawing.Point(23, 165);
+            this.btnChar.Location = new System.Drawing.Point(12, 237);
             this.btnChar.Name = "btnChar";
             this.btnChar.Size = new System.Drawing.Size(103, 23);
             this.btnChar.TabIndex = 9;
@@ -100,7 +100,7 @@ namespace DataTypes
             // 
             // btnBoolean
             // 
-            this.btnBoolean.Location = new System.Drawing.Point(23, 216);
+            this.btnBoolean.Location = new System.Drawing.Point(12, 312);
             this.btnBoolean.Name = "btnBoolean";
             this.btnBoolean.Size = new System.Drawing.Size(103, 23);
             this.btnBoolean.TabIndex = 12;
@@ -110,7 +110,7 @@ namespace DataTypes
             // 
             // txtInteger
             // 
-            this.txtInteger.Location = new System.Drawing.Point(167, 26);
+            this.txtInteger.Location = new System.Drawing.Point(207, 12);
             this.txtInteger.Name = "txtInteger";
             this.txtInteger.Size = new System.Drawing.Size(100, 20);
             this.txtInteger.TabIndex = 1;
@@ -118,7 +118,7 @@ namespace DataTypes
             // 
             // txtFloat
             // 
-            this.txtFloat.Location = new System.Drawing.Point(167, 70);
+            this.txtFloat.Location = new System.Drawing.Point(207, 87);
             this.txtFloat.Name = "txtFloat";
             this.txtFloat.Size = new System.Drawing.Size(100, 20);
             this.txtFloat.TabIndex = 4;
@@ -126,7 +126,7 @@ namespace DataTypes
             // 
             // txtString
             // 
-            this.txtString.Location = new System.Drawing.Point(167, 117);
+            this.txtString.Location = new System.Drawing.Point(207, 162);
             this.txtString.Name = "txtString";
             this.txtString.Size = new System.Drawing.Size(100, 20);
             this.txtString.TabIndex = 7;
@@ -134,7 +134,7 @@ namespace DataTypes
             // 
             // txtChar
             // 
-            this.txtChar.Location = new System.Drawing.Point(167, 167);
+            this.txtChar.Location = new System.Drawing.Point(207, 237);
             this.txtChar.Name = "txtChar";
             this.txtChar.Size = new System.Drawing.Size(100, 20);
             this.txtChar.TabIndex = 10;
@@ -146,7 +146,7 @@ namespace DataTypes
             this.listBoolean.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.listBoolean.Location = new System.Drawing.Point(167, 216);
+            this.listBoolean.Location = new System.Drawing.Point(207, 312);
             this.listBoolean.Name = "listBoolean";
             this.listBoolean.Size = new System.Drawing.Size(100, 30);
             this.listBoolean.TabIndex = 13;
@@ -155,7 +155,7 @@ namespace DataTypes
             // lblInteger
             // 
             this.lblInteger.AutoSize = true;
-            this.lblInteger.Location = new System.Drawing.Point(304, 29);
+            this.lblInteger.Location = new System.Drawing.Point(433, 12);
             this.lblInteger.Name = "lblInteger";
             this.lblInteger.Size = new System.Drawing.Size(36, 13);
             this.lblInteger.TabIndex = 2;
@@ -164,7 +164,7 @@ namespace DataTypes
             // lblFloat
             // 
             this.lblFloat.AutoSize = true;
-            this.lblFloat.Location = new System.Drawing.Point(304, 73);
+            this.lblFloat.Location = new System.Drawing.Point(433, 87);
             this.lblFloat.Name = "lblFloat";
             this.lblFloat.Size = new System.Drawing.Size(36, 13);
             this.lblFloat.TabIndex = 5;
@@ -173,7 +173,7 @@ namespace DataTypes
             // lblString
             // 
             this.lblString.AutoSize = true;
-            this.lblString.Location = new System.Drawing.Point(304, 120);
+            this.lblString.Location = new System.Drawing.Point(433, 162);
             this.lblString.Name = "lblString";
             this.lblString.Size = new System.Drawing.Size(36, 13);
             this.lblString.TabIndex = 8;
@@ -182,7 +182,7 @@ namespace DataTypes
             // lblChar
             // 
             this.lblChar.AutoSize = true;
-            this.lblChar.Location = new System.Drawing.Point(304, 170);
+            this.lblChar.Location = new System.Drawing.Point(433, 237);
             this.lblChar.Name = "lblChar";
             this.lblChar.Size = new System.Drawing.Size(36, 13);
             this.lblChar.TabIndex = 11;
@@ -191,7 +191,7 @@ namespace DataTypes
             // lblBoolean
             // 
             this.lblBoolean.AutoSize = true;
-            this.lblBoolean.Location = new System.Drawing.Point(304, 221);
+            this.lblBoolean.Location = new System.Drawing.Point(433, 312);
             this.lblBoolean.Name = "lblBoolean";
             this.lblBoolean.Size = new System.Drawing.Size(36, 13);
             this.lblBoolean.TabIndex = 14;
@@ -199,9 +199,10 @@ namespace DataTypes
             // 
             // btnClearAll
             // 
-            this.btnClearAll.Location = new System.Drawing.Point(23, 304);
+            this.btnClearAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnClearAll.Location = new System.Drawing.Point(12, 497);
             this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(103, 23);
+            this.btnClearAll.Size = new System.Drawing.Size(186, 23);
             this.btnClearAll.TabIndex = 15;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = true;
@@ -209,10 +210,13 @@ namespace DataTypes
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(733, 304);
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnExit.FlatAppearance.BorderSize = 5;
+            this.btnExit.Location = new System.Drawing.Point(664, 497);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(103, 23);
+            this.btnExit.Size = new System.Drawing.Size(187, 23);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -244,6 +248,7 @@ namespace DataTypes
             // 
             // showClueToolStripMenuItem
             // 
+            this.showClueToolStripMenuItem.Enabled = false;
             this.showClueToolStripMenuItem.Name = "showClueToolStripMenuItem";
             this.showClueToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.showClueToolStripMenuItem.Text = "Show &Clue";
@@ -259,9 +264,10 @@ namespace DataTypes
             // 
             // btnClue
             // 
-            this.btnClue.Location = new System.Drawing.Point(368, 304);
+            this.btnClue.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnClue.Location = new System.Drawing.Point(338, 497);
             this.btnClue.Name = "btnClue";
-            this.btnClue.Size = new System.Drawing.Size(103, 23);
+            this.btnClue.Size = new System.Drawing.Size(186, 23);
             this.btnClue.TabIndex = 17;
             this.btnClue.Text = "Reset Clues";
             this.btnClue.UseVisualStyleBackColor = true;
@@ -270,10 +276,11 @@ namespace DataTypes
             // 
             // txbFirstClue
             // 
-            this.txbFirstClue.Location = new System.Drawing.Point(736, 26);
+            this.txbFirstClue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFirstClue.Location = new System.Drawing.Point(665, 9);
             this.txbFirstClue.Multiline = true;
             this.txbFirstClue.Name = "txbFirstClue";
-            this.txbFirstClue.Size = new System.Drawing.Size(100, 220);
+            this.txbFirstClue.Size = new System.Drawing.Size(186, 333);
             this.txbFirstClue.TabIndex = 18;
             this.txbFirstClue.Text = "I might do something?";
             this.txbFirstClue.MouseHover += new System.EventHandler(this.txbFirstClue_MouseHover);
@@ -283,27 +290,27 @@ namespace DataTypes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(863, 350);
+            this.ClientSize = new System.Drawing.Size(863, 532);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.lblInteger);
+            this.Controls.Add(this.lblFloat);
+            this.Controls.Add(this.txtInteger);
+            this.Controls.Add(this.btnInteger);
+            this.Controls.Add(this.txtFloat);
+            this.Controls.Add(this.txtString);
+            this.Controls.Add(this.btnFloat);
+            this.Controls.Add(this.txtChar);
+            this.Controls.Add(this.btnString);
+            this.Controls.Add(this.listBoolean);
             this.Controls.Add(this.txbFirstClue);
+            this.Controls.Add(this.btnBoolean);
             this.Controls.Add(this.btnClue);
+            this.Controls.Add(this.btnChar);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.lblBoolean);
             this.Controls.Add(this.lblChar);
             this.Controls.Add(this.lblString);
-            this.Controls.Add(this.lblFloat);
-            this.Controls.Add(this.lblInteger);
-            this.Controls.Add(this.listBoolean);
-            this.Controls.Add(this.txtChar);
-            this.Controls.Add(this.txtString);
-            this.Controls.Add(this.txtFloat);
-            this.Controls.Add(this.txtInteger);
-            this.Controls.Add(this.btnBoolean);
-            this.Controls.Add(this.btnChar);
-            this.Controls.Add(this.btnString);
-            this.Controls.Add(this.btnFloat);
-            this.Controls.Add(this.btnInteger);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Basic Data Types";
