@@ -429,7 +429,7 @@ namespace DataTypes
 
         private void CTimer_Tick(object sender, EventArgs e)
         {
-            txbFirstClue.Enabled = false;
+            txbFirstClue.Visible = false;
         }
     }
 }

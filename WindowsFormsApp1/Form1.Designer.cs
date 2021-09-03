@@ -214,7 +214,7 @@ namespace DataTypes
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnExit.FlatAppearance.BorderSize = 5;
-            this.btnExit.Location = new System.Drawing.Point(664, 480);
+            this.btnExit.Location = new System.Drawing.Point(665, 480);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(187, 50);
             this.btnExit.TabIndex = 16;
