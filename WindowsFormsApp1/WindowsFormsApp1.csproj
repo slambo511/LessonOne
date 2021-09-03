@@ -103,9 +103,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="quest.ico.ico" />
+    <Content Include="Resources\42.jpg" />
     <Content Include="Resources\CN.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\NO Bananas.png" />
     <Content Include="Resources\quest.ico.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -8,6 +8,7 @@ namespace DataTypes
 {
     public partial class Form1 : Form
     {
+        public bool BG = false;
         public int fourtyTwoCount = 0;
         public int maxWidth, maxHeight;
         public int[] fontSizes = new int[] { 14, 16, 18, 20, 22, 24 };
@@ -59,6 +60,12 @@ namespace DataTypes
         {
             try
             {
+                if (!BG)
+                {
+                    Image BGImage = new Bitmap(@"Resources\42.jpg");
+                    BackgroundImage = BGImage;
+                }
+
                 if (txtInteger.Text == @"")
                 {
                     MessageBox.Show(@"You must enter a value first");
@@ -67,6 +74,7 @@ namespace DataTypes
                 }
                 else if (txtInteger.Text == @"42")
                 {
+
                     fourtyTwoCount += 1;
                     if (fourtyTwoCount == 42)
                     {
