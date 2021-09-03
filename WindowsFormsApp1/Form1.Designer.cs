@@ -199,10 +199,10 @@ namespace DataTypes
             // 
             // btnClearAll
             // 
-            this.btnClearAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnClearAll.Location = new System.Drawing.Point(12, 497);
+            this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClearAll.Location = new System.Drawing.Point(12, 480);
             this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(186, 23);
+            this.btnClearAll.Size = new System.Drawing.Size(186, 50);
             this.btnClearAll.TabIndex = 15;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = true;
@@ -210,13 +210,13 @@ namespace DataTypes
             // 
             // btnExit
             // 
-            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnExit.FlatAppearance.BorderSize = 5;
-            this.btnExit.Location = new System.Drawing.Point(664, 497);
+            this.btnExit.Location = new System.Drawing.Point(664, 480);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(187, 23);
+            this.btnExit.Size = new System.Drawing.Size(187, 50);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -265,9 +265,9 @@ namespace DataTypes
             // btnClue
             // 
             this.btnClue.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnClue.Location = new System.Drawing.Point(338, 497);
+            this.btnClue.Location = new System.Drawing.Point(338, 480);
             this.btnClue.Name = "btnClue";
-            this.btnClue.Size = new System.Drawing.Size(186, 23);
+            this.btnClue.Size = new System.Drawing.Size(186, 50);
             this.btnClue.TabIndex = 17;
             this.btnClue.Text = "Reset Clues";
             this.btnClue.UseVisualStyleBackColor = true;

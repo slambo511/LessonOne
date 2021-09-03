@@ -8,8 +8,9 @@ namespace DataTypes
 {
     public partial class Form1 : Form
     {
+        public int fourtyTwoCount = 0;
         public int maxWidth, maxHeight;
-        public int[] fontSizes = new int[] { 14, 16, 18, 20, 22, 24, 26 };
+        public int[] fontSizes = new int[] { 14, 16, 18, 20, 22, 24 };
         public static FontFamily fontFamily = new FontFamily("Arial");
         public Font font = new Font(fontFamily, 12, FontStyle.Regular, GraphicsUnit.Point);
         public string familyName, familyList = "";
@@ -66,6 +67,11 @@ namespace DataTypes
                 }
                 else if (txtInteger.Text == @"42")
                 {
+                    fourtyTwoCount += 1;
+                    if (fourtyTwoCount == 42)
+                    {
+                        MessageBox.Show("The Hitchhikers Guide to the Galaxy");
+                    }
                     int spaceToOutput = 0;
                     int biggestCurrentMax = 0;
                     int biggestWidth = 0, biggestHeight = 0;
@@ -128,48 +134,12 @@ namespace DataTypes
                             }
                         }
                     }
-
-                    //    if ((c == txbFirstClue) || (c == txtChar) || (c == txtFloat) || (c ==txtInteger) || (c == txtString) || (c == listBoolean))
-                    //    {
-                    //        continue;
-                    //    }
-                    //    if (c == btnInteger || c == btnChar || c == btnBoolean || c == btnFloat || c == btnString)
-                    //    {
-                    //        Size size = TextRenderer.MeasureText(c.Text.Replace(' ', '_'), c.Font);
-                    //        if (c.Width > maxWidth)
-                    //        {
-                    //            maxWidth = c.Width;
-                    //        }
-                    //        if (c.Height > maxHeight)
-                    //        {
-                    //            maxHeight = c.Height;
-                    //        }
-                    //        c.Width = size.Width + 25;
-                    //        c.Height = size.Height + 15;
-                    //        if ((btnInteger.Location.X + btnInteger.Width) > txtInteger.Location.X)
-                    //        { 
-                    //            txtInteger.Location = new Point(txtInteger.Location.X + btnInteger.Location.X + btnInteger.Width + 15, txtInteger.Location.Y);
-                    //        }
-                    //    }
-                    //    listBoolean.Height = (maxHeight + 10) * 2;
-                    //    if (txtChar.Location.X < maxWidth + 10 || 
-                    //        txtFloat.Location.X < maxWidth +10 || 
-                    //        txtInteger.Location.X < maxWidth + 10 || 
-                    //        txtString.Location.X < maxWidth + 10 || 
-                    //        listBoolean.Location.X < maxWidth + 10)
-                    //    {
-                    //        txtChar.Location = new Point(maxWidth + 10, txtChar.Location.Y);
-                    //        txtFloat.Location = new Point(maxWidth + 10, txtFloat.Location.Y);
-                    //        txtInteger.Location = new Point(maxWidth + 10, txtInteger.Location.Y);
-                    //        txtString.Location = new Point(maxWidth + 10, txtString.Location.Y);
-                    //        listBoolean.Location = new Point(maxWidth + 10, listBoolean.Location.Y);
-                    //        maxWidth = 0;
-                    //    }
-                    //
                 }
- 
-                Integer = int.Parse(txtInteger.Text);
-                lblInteger.Text = Integer.ToString();
+                if (lblInteger.Text != @"Life, the universe and everything")
+                {
+                    Integer = int.Parse(txtInteger.Text);
+                    lblInteger.Text = Integer.ToString();
+                }
                 txtInteger.Text = @"";
             }
             catch (Exception ex)
