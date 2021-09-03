@@ -8,6 +8,8 @@ namespace DataTypes
 {
     public partial class Form1 : Form
     {
+        public Image BGImage = new Bitmap(@"Resources\42.jpg");
+        public Image NOBananas = new Bitmap(@"Resources\No Bananas.png");
         public bool BG = false;
         public int fourtyTwoCount = 0;
         public int maxWidth, maxHeight;
@@ -62,7 +64,6 @@ namespace DataTypes
             {
                 if (!BG)
                 {
-                    Image BGImage = new Bitmap(@"Resources\42.jpg");
                     BackgroundImage = BGImage;
                 }
 
@@ -428,7 +429,7 @@ namespace DataTypes
 
         private void CTimer_Tick(object sender, EventArgs e)
         {
-            txbFirstClue.Visible = false;
+            txbFirstClue.Enabled = false;
         }
     }
 }
